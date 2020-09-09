@@ -1,0 +1,628 @@
+.player-details {
+  margin-top: 10%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+.player-name p {
+  font-size: 22px;
+  line-height: 1.68;
+}
+.player-name p span {
+  font-weight: 600;
+  color: #0f81dc;
+}
+.player-name p:nth-child(2) span {
+  font-weight: 600;
+  color: #0f81dc;
+  padding-left: 7%;
+}
+.dashboard {
+  font-family: "Segoe UI Regular";
+  margin-top: 8%;
+}
+.control {
+  padding-left: 15%;
+}
+.control span:nth-child(2) {
+  padding: 0 5px 0 5px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: right;
+  color: #686868;
+}
+.acc-brain-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.acc-brain-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50%;
+  margin-top: -50%;
+}
+
+.acc-card {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+.acc-card div div:nth-child(2) {
+  font-size: 16px;
+  line-height: 1.31;
+  color: #666666;
+}
+.acc-card-before::before {
+  width: auto;
+  height: 45px;
+  content: "Cumulative Events";
+  color: #fff;
+  background: #0f81dc;
+  top: -12%;
+  left: 0;
+  border-radius: 10px;
+  position: absolute;
+  z-index: -2;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.35;
+  padding: 3px 0 3px 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  padding: 0 10px 0 10px;
+}
+.acc-brain-load {
+  height: 87%;
+}
+
+.head-acc-evnt-chart {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.head-acc-evnt-chart::after {
+  width: auto;
+  height: 45px;
+  content: attr(data-descr);
+  color: #fff;
+  background: #0f81dc;
+  top: -13%;
+  left: 0;
+  border-radius: 10px;
+  position: absolute;
+  z-index: -22;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.35;
+  padding: 3px 0 3px 0;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  white-space: pre;
+  padding: 0 10px 0 10px;
+}
+
+select.select-gender {
+  color: #9e9e9e;
+}
+.cumm {
+  margin-top: 6%;
+}
+
+.acc-evnt {
+  margin-top: 7%;
+  margin-bottom: 6%;
+}
+.goto-top > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #0f81dc;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 3px 0 10px -1px rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
+.goto-top p {
+  font-size: 14px;
+  color: #0f81dc;
+  line-height: 10px;
+  position: absolute;
+  top: 30px;
+}
+.head-acc-evnt-chart > div > div:nth-child(2) p {
+  /* display: inline-block; */
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  color: #686868;
+  padding-left: 25%;
+}
+.dark-mode-container {
+  width: 90px;
+  height: 70px;
+  box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.14);
+  position: fixed;
+  top: calc(50% - 70px);
+  right: -70px;
+  border-left: 5px solid #0f81dc;
+  border-radius: 10px;
+  transition: right 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+  background: #fff;
+}
+.dark-mode-container:hover {
+  right: -5px;
+}
+.dark-mode-container img {
+  width: 50%;
+  animation: move 2s linear infinite;
+}
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.dark-mode-chooser {
+  width: 85px;
+  height: 120px;
+  position: absolute;
+  right: 100px;
+  box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.14);
+  border-radius: 10px;
+  background: #0f81dc;
+}
+.dark-mode-chooser div:not(:nth-child(3)) {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.14);
+  animation: hvr-pulse 2s linear infinite;
+}
+.dark-mode-chooser div:nth-child(1):hover {
+  animation: none;
+}
+.dark-mode-chooser div:nth-child(2):hover {
+  animation: none;
+}
+.dark-mode-chooser div:nth-child(1) {
+  margin-top: 10%;
+  margin-left: 30%;
+  background: #fff;
+}
+
+.dark-mode-chooser div:nth-child(2) {
+  margin-top: 20%;
+  margin-left: 30%;
+  background: #232838;
+}
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #0f81dc;
+  top: 50%;
+  position: absolute;
+  right: -12px;
+  transform: translate(-50%, -50%);
+}
+.dashboard-mock {
+  border-radius: 10px;
+  height: 405px;
+  overflow-y: auto;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+}
+.dashboard-mock::-webkit-scrollbar {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #0f81dc;
+}
+.dashboard-mock::-webkit-scrollbar-thumb {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: rgb(142, 210, 255);
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.12);
+}
+
+.organization-admin-pt-8 {
+  margin-top: 8% !important;
+}
+
+.edit-team-btn {
+  background: #0f81dc;
+  padding: 5px 20px 5px 20px;
+  color: #fff;
+  border: none;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.edit-teams {
+  background: rgba(0, 0, 0, 0.06);
+  position: relative;
+  margin: 5px;
+  border-radius: 10px;
+}
+.delete__icon {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  cursor: pointer;
+}
+.modal__wrapper {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  background: transparent;
+  width: 100%;
+  background: #205b912e;
+}
+div.modal_form {
+  height: 580px !important;
+  margin-top: -200px !important;
+}
+
+.edit-your-team {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px !important;
+}
+
+input.team-edit-input {
+  background-color: transparent !important;
+}
+.team-form {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.modal__show {
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+  margin: 0 !important;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  animation: fadeIn 1s, slideIn 0.8s linear;
+}
+.action_buttons button {
+  border: 1px solid #0f81dc;
+  background: #fff;
+  color: #0f81dc;
+  padding: 5px 20px 5px 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.military-version-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 20% 2% 20%;
+  background: linear-gradient(45deg, #0000, #0b3b88, #0000);
+  box-shadow: 0 0 15px -1px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(-50%, 50%);
+    animation-timing-function: linear;
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hover_edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: aliceblue;
+}
+.pen_icon {
+  width: 50%;
+  /* position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%) */
+}
+.ptf-team {
+  padding: 0 4% 0 4%;
+}
+.align-element-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60.1vh;
+}
+
+.contact__page-center-align {
+  padding-top: 5%;
+}
+
+input.fromTodate {
+  border-bottom: none !important;
+}
+input.borderRight__fromTodate {
+  border-right: 1px solid #0f81dc;
+}
+.militay-view {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.military-sidebar {
+  height: 100vh;
+  width: 15%;
+  background: linear-gradient(0deg, #000, #1282d8, #000);
+  box-shadow: 5px 0 10px -1px rgba(0, 0, 0, 0.12);
+}
+.military-main-content {
+  width: 85%;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* padding: 0 5% 0 5%; */
+}
+.military-dark-mode {
+  background: #171b25;
+}
+
+div.penstate-university-bg {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(8, 133, 233, 1) 0%,
+    rgba(2, 34, 67, 1) 50%,
+    rgba(1, 8, 25, 1) 100%
+  );
+}
+
+.organization-pad__military {
+  padding: 0 3% 0 3%;
+}
+
+.slidebar-nav {
+  margin-top: 10vh;
+  text-align: center;
+}
+.slidebar-nav h5 {
+  font-size: 30px;
+  font-weight: 900;
+  background: #003a69;
+  line-height: 50px;
+  color: #fff;
+}
+.slidebar-nav ul {
+  text-align: center;
+}
+
+.list-one > li:nth-child(1) {
+  background: none;
+  padding: 5px 0 5px 0;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.list-one > li {
+  padding: 5px;
+}
+
+.list-one > li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 0 5px 0;
+}
+.list-two > li {
+  padding: 5px 5px 5px 5px;
+}
+div.titles {
+  flex-flow: column;
+}
+
+@media screen and (max-width: 599px) {
+  .head-acc-evnt-chart::after {
+    white-space: pre-wrap;
+    top: -12%;
+    height: 70px;
+  }
+  .acc-evnt {
+    margin-top: 25%;
+  }
+  div.titiles input,
+  input.upload-btn {
+    width: 225px;
+  }
+  .acc-card-before::before {
+    top: -6%;
+  }
+  .daily-btn,
+  .weekly-btn,
+  .monthly-btn {
+    margin-right: 2px;
+  }
+  .export-report-btn {
+    margin-top: 2px;
+  }
+  .width-100 {
+    width: 100% !important;
+  }
+  .dashboard {
+    overflow-x: hidden;
+  }
+
+  .dashboard-mock::before {
+    content: "Please tap to close";
+    color: #fff;
+    font-size: 12px;
+  }
+  div.organization_team {
+    width: 105%;
+    height: 39vh !important;
+  }
+  div.t-roster {
+    margin-top: 10vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  div.titiles input,
+  input.upload-btn {
+    width: 225px;
+  }
+  div.t-roster {
+    margin-top: 10vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .adminDashboardTop {
+    display: inline-flex;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1500px) {
+  div.penstate-university-bg {
+    padding-top: 8% !important;
+  }
+}
+@media screen and (min-width: 2560px) and (max-width: 3238px) {
+  div.organization_team {
+    bottom: -35.4vh;
+  }
+  div.profile-mt {
+    height: 71.2vh;
+    align-items: center;
+    display: grid;
+  }
+  div.profile-container {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1680px) and (max-width: 3239px) {
+  div.t-roster {
+    margin-top: 6% !important;
+  }
+}
+@media screen and (min-width: 3240px) {
+  div.t-roster {
+    margin-top: 7% !important;
+  }
+  .align-element-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90.1vh;
+  }
+  .contact__page-center-align {
+    padding-top: 5%;
+    padding-bottom: 6.4%;
+  }
+  div.profile-mt {
+    margin-top: 25%;
+  }
+  div.profile__page {
+    bottom: -130.1%;
+  }
+  .align-center__about-page {
+    margin-top: 21%;
+  }
+  div.about__page {
+    bottom: -189%;
+  }
+  div.contact__page {
+    bottom: -9.8vh !important;
+  }
+  div.pt-surface {
+    padding-top: 287px;
+  }
+}
+.brain-card-pt-2-5 {
+  padding-top: 1.5rem !important;
+}
+
+@media (max-width: 768px) {
+  .adminDashboardTop {
+    display: block !important;
+  }
+
+  .brain-card-pt-2-5 {
+    padding-top: 2.5rem !important;
+  }
+  .cumm {
+    margin-top: 10%;
+  }
+  .player-dashboard-sub-head {
+    text-align: center !important;
+    align-items: center !important;
+  }
+  .sub-head-button {
+    margin-top: 2% !important;
+    margin-bottom: 2% !important;
+    margin-right: 0px !important;
+    width: 100%;
+    display: "block";
+  }
+
+  .player-dashboard-title {
+    margin-bottom: 5% !important;
+  }
+}
+
+.widget-subheading {
+  font-weight: 300;
+  color: #80878e;
+  font-size: smaller;
+  font-family: "Roboto", sans-serif;
+}
+
+.widget-numbers {
+  font-weight: 800;
+  text-decoration: overline;
+  font-size: 1.4em;
+  color: #0f81dc !important;
+}
+
+.chart-container {
+  position: relative !important;
+  height: 90px;
+  width: 100% !important;
+}
+
+.player-dashboard-sub-head {
+  padding-left: 5%;
+  font-size: 1.4rem !important;
+  font-weight: 900;
+  font-family: "Segoe UI Regular";
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.94;
+  letter-spacing: 3.53px;
+  text-align: left;
+  color: #686868;
+}
+.sub-head-button {
+  margin-right: 5%;
+}
