@@ -242,12 +242,6 @@ select.select-gender {
   margin: 5px;
   border-radius: 10px;
 }
-.delete__icon {
-  position: absolute;
-  right: -10px;
-  top: -10px;
-  cursor: pointer;
-}
 .modal__wrapper {
   position: fixed;
   z-index: 1;
@@ -284,8 +278,6 @@ input.team-edit-input {
   left: 50% !important;
   transform: translate(-50%, -50%);
   margin: 0 !important;
-  color: white;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;

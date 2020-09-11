@@ -42,7 +42,7 @@
 .Cumulative-Overview-player-dash .player-dashboard-sub-head {
   color: #0f81dc !important;
 }
-..player-dashboard-sub-head {
+.player-dashboard-sub-head {
   font-weight: 900;
 }
 .Individual-Head-Acceleration-player-dash {
@@ -551,11 +551,6 @@ input#MyrangeSlider3:focus {
   font-weight: 700;
   font-size: 20px;
 }
-.delete-confirmation-button {
-  position: absolute;
-  bottom: 0;
-  padding: 20px;
-}
 
 button.btn.button-back {
   background: #e2061b;
@@ -594,18 +589,6 @@ button.btn.button-yes {
   font-size: 18px !important;
   font-weight: 900 !important;
   line-height: 32px !important;
-}
-.camera-box {
-  height: auto !important;
-  padding: 0px 20px;
-  top: 25% !important;
-  background-color: #f8f9fa !important;
-  box-shadow: inherit !important;
-  /* width: 42% !important; */
-  padding-bottom: 7px !important;
-}
-.delete__icon {
-  z-index: 1;
 }
 
 /**
@@ -879,7 +862,10 @@ button.btn.button-yes {
 
 .camera-container {
   position: relative;
-  margin-top: 4% !important;
+  /* margin-top: 4% !important; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .camera-circle {
@@ -901,18 +887,20 @@ button.btn.button-yes {
   }
 }
 
-.camera-alert {
+.camera-bottom-section {
   position: absolute;
   height: 180px;
-  width: 100%;
-  bottom: 0;
-  left: 50%;
+  width: calc(100% + 1px);
+  bottom: -2px;
+  left: calc(50% + 0.5px);
   transform: translate(-50%);
   background: #0f66ae;
   font-weight: bold;
   font-size: 18px;
   line-height: 0.7;
   padding: 15px;
+  color: white;
+  text-align: center;
 }
 
 .switch_cam {
@@ -923,22 +911,35 @@ button.btn.button-yes {
   padding: 0px 20px 20px 0px;
 }
 
-.delete-confirmation-button {
-  position: absolute;
-  height: 180px;
-  width: calc(100% - 40px);
-  background: #0f66ae;
+.confirm-btn-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 7px;
 }
 
-@media screen and (max-width: 480px) {
-  .delete-confirmation-button {
-    width: calc(100% - 16px);
-    margin-bottom: 15px;
-  }
+.camera-box {
+  height: auto !important;
+  box-shadow: inherit !important;
+  z-index: 2;
+}
+
+.popup-background {
+  background: #f8f9fa;
+  z-index: 1;
+}
+
+.delete__icon {
+  position: absolute;
+  /* right: -20px; */
+  /* top: 0; */
+  z-index: 1;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+}
+
+.camera-error {
+  color: black;
+  text-align: center;
 }
 
 #container-circles {
@@ -985,7 +986,11 @@ button.btn.button-yes {
 #white-flash.do-transition {
   opacity: 0;
   background: #fff;
-  z-index: 1;
+}
+
+#display-error {
+  color: #000;
+  background-color: #fff;
 }
 
 .react-html5-camera-photo {
@@ -1010,14 +1015,8 @@ button.btn.button-yes {
   object-fit: cover;
 }
 
-.react-html5-camera-photo-fullscreen > .display-error {
-  width: 100%;
-  height: 100%;
-  color: black;
-}
-
 .captured-img {
-  margin-top: 4% !important;
+  /* margin-top: 4% !important; */
   -webkit-object-fit: cover;
   -moz-object-fit: cover;
   -o-object-fit: cover;

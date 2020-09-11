@@ -388,9 +388,6 @@
   .irb-header {
     height: 300px !important;
   }
-  .camera-box {
-    padding: 15px 8px !important;
-  }
 }
 
 @media screen and (max-width: 414px) {
